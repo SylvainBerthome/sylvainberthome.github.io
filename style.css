@@ -1,51 +1,516 @@
 
+/* =========================
+   GENERAL
+========================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: #101018;
-  color: white;
-  font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #272829;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 30px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-nav a:hover {
-  color: #a78bfa;
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #040b14;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 25px;
+
+    z-index: 1000;
 }
 
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
+.profile {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.hero h1 {
-  font-size: 60px;
-  color: #a78bfa;
+.profile img {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 7px solid #2c3543;
+
+    margin: 0 auto 15px;
 }
 
-.button {
-  padding: 14px 25px;
-  background: #7c3aed;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+.profile h2 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #a8b2c1;
+    margin-top: 5px;
+}
+
+.sidebar nav {
+    width: 100%;
+}
+
+.sidebar nav a {
+    display: block;
+
+    padding: 15px 20px;
+    margin: 8px 0;
+
+    color: #a8b2c1;
+    font-size: 15px;
+
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #149ddd;
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    color: #8b949e;
+    font-size: 11px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+.section {
+    min-height: 100vh;
+    padding: 90px 7%;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    gap: 50px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.subtitle {
+    color: #149ddd;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.home-text h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: 700;
+    color: #173b6c;
+    line-height: 1.2;
+}
+
+.home-text h2 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.home-text h3 {
+    font-size: 17px;
+    color: #149ddd;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.description {
+    margin-top: 25px;
+    color: #555;
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+
+    background: #149ddd;
+    color: white;
+
+    padding: 13px 25px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #087bb5;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #149ddd;
+    color: #149ddd;
+}
+
+.btn-outline:hover {
+    background: #149ddd;
+    color: white;
+}
+
+.home-image {
+    flex: 0 0 300px;
+}
+
+.home-image img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    color: #149ddd;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    color: #173b6c;
+    margin-top: 8px;
+}
+
+.line {
+    width: 55px;
+    height: 4px;
+    background: #149ddd;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f5f7fa;
+}
+
+.about-title {
+    font-size: 24px;
+    color: #173b6c;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    line-height: 1.9;
+    color: #555;
+    max-width: 850px;
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+
+    border-left: 4px solid #149ddd;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.about-card h4 {
+    color: #173b6c;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.cv-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    background: white;
+}
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.filter {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.filter:hover,
+.filter.active {
+    color: #149ddd;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.13);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-category {
+    color: #149ddd;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.project-date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.project-info h3 {
+    color: #173b6c;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.project-info a {
+    color: #149ddd;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-info a:hover {
+    color: #087bb5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #040b14;
+    color: white;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .home-container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .home-image {
+        flex: none;
+    }
+
+    .home-image img {
+        width: 200px;
+        height: 240px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 12px 15px;
+
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .profile,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sidebar nav a {
+        margin: 0;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .section {
+        padding: 110px 7% 70px;
+    }
+
+    .home-container {
+        gap: 30px;
+    }
+
+    .home-image {
+        margin: 0 auto;
+    }
+
+    .about-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
 }
