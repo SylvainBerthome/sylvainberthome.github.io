@@ -1,27 +1,290 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Game Developer</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Police Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-  </nav>
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
 
-  <main class="hero">
-    <p>HELLO, I'M A</p>
-    <h1>GAME DEVELOPER</h1>
-    <h2>Creating worlds, one game at a time.</h2>
-    <a href="projects.html" class="button">
-      Explore my projects
-    </a>
-  </main>
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Photo de profil">
+            <h2>Mon Nom</h2>
+            <p>Game Programmer</p>
+        </div>
+
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>© 2026 Mon Portfolio</p>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- HOME -->
+        <section id="home" class="home section">
+
+            <div class="home-container">
+
+                <div class="home-text">
+
+                    <p class="subtitle">WELCOME TO MY PORTFOLIO</p>
+
+                    <h1>Mon Nom</h1>
+
+                    <h2>Game Programmer</h2>
+
+                    <h3>Gameplay • AI • Engine</h3>
+
+                    <p class="description">
+                        Hello and welcome to my portfolio!
+
+                        I'm a passionate programmer interested in
+                        mathematics, video games and computer science.
+
+                        Here you can discover my different projects,
+                        my skills and my experience.
+                    </p>
+
+                    <div class="home-buttons">
+                        <a href="#projects" class="btn">
+                            View my projects
+                        </a>
+
+                        <a href="cv.pdf" class="btn btn-outline">
+                            Download my CV
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="home-image">
+                    <img src="images/profile.jpg" alt="Portrait">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about section">
+
+            <div class="section-heading">
+                <span>ABOUT ME</span>
+                <h2>Get to Know Me</h2>
+                <div class="line"></div>
+            </div>
+
+            <h3 class="about-title">
+                Passionate About Creating Unique Gameplay Experiences
+            </h3>
+
+            <p class="about-description">
+                I enjoy developing interactive experiences and
+                solving technical challenges through programming.
+
+                My interests include gameplay programming,
+                artificial intelligence and game engine development.
+            </p>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <h4>Specialization</h4>
+                    <p>Gameplay & AI Programming</p>
+                </div>
+
+                <div class="about-card">
+                    <h4>Experience Level</h4>
+                    <p>Junior</p>
+                </div>
+
+                <div class="about-card">
+                    <h4>Education</h4>
+                    <p>Master's Degree in Game Programming</p>
+                </div>
+
+                <div class="about-card">
+                    <h4>Languages</h4>
+                    <p>French • English</p>
+                </div>
+
+            </div>
+
+            <div class="cv-buttons">
+                <a href="cv-fr.pdf" class="btn">
+                    Download French Resume
+                </a>
+
+                <a href="cv-en.pdf" class="btn btn-outline">
+                    Download English Resume
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects section">
+
+            <div class="section-heading">
+                <span>MY WORK</span>
+                <h2>Projects</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="project-filters">
+                <a href="#projects" class="filter active">All Projects</a>
+                <a href="#projects" class="filter">Personal & Study</a>
+                <a href="#projects" class="filter">Professional</a>
+            </div>
+
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+                <article class="project-card">
+                    <img src="images/project1.jpg" alt="Deer and Boy">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Cinematic Platformer • Unity
+                        </p>
+                        <p class="project-date">2024 - 2026</p>
+                        <h3>Deer & Boy • LIFELINE</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 2 -->
+                <article class="project-card">
+                    <img src="images/project2.jpg" alt="Roller Loop">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Racing Game • Unreal Engine 5
+                        </p>
+                        <p class="project-date">2024 - 2025</p>
+                        <h3>Roller Loop</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 3 -->
+                <article class="project-card">
+                    <img src="images/project3.jpg" alt="Gyaru Ultimate Revenge">
+                    <div class="project-info">
+                        <p class="project-category">
+                            RPG • Unreal Engine 4
+                        </p>
+                        <p class="project-date">2024</p>
+                        <h3>Gyaru Ultimate Revenge !</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 4 -->
+                <article class="project-card">
+                    <img src="images/project4.jpg" alt="Procedural Planet">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Procedural Generation • Unity
+                        </p>
+                        <p class="project-date">2025</p>
+                        <h3>Procedural Planet Generation</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 5 -->
+                <article class="project-card">
+                    <img src="images/project5.jpg" alt="Physics Engine">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Physics Engine • Unity
+                        </p>
+                        <p class="project-date">2025</p>
+                        <h3>Custom Physics Engine</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 6 -->
+                <article class="project-card">
+                    <img src="images/project6.jpg" alt="Escapig">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Puzzle Game • Unity
+                        </p>
+                        <p class="project-date">2023</p>
+                        <h3>Escapig</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 7 -->
+                <article class="project-card">
+                    <img src="images/project7.jpg" alt="Lich Engine">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Custom Game Engine
+                        </p>
+                        <p class="project-date">2023</p>
+                        <h3>Lich Engine</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 8 -->
+                <article class="project-card">
+                    <img src="images/project8.jpg" alt="Parkour System">
+                    <div class="project-info">
+                        <p class="project-category">
+                            Parkour System • Unreal Engine 5
+                        </p>
+                        <p class="project-date">2025</p>
+                        <h3>Parkour System</h3>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            © 2026 Mon Portfolio. All Rights Reserved.
+        </footer>
+
+    </main>
 
 </body>
 </html>
